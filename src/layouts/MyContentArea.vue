@@ -1,5 +1,5 @@
 <template>
-    <main role="main" class="w-screen bg-gray-200 px-2 pt-1">
+    <main role="main" class="w-screen bg-gray-200">
       <slot />
     </main>
   </template>
