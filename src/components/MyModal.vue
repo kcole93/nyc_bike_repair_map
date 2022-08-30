@@ -30,19 +30,23 @@
                   class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
                 >
                   <DialogTitle
-                    as="h3"
+                    as="h1"
                     class="text-lg font-medium leading-6 text-gray-900"
                   >
                     About this Page
                   </DialogTitle>
-                  <div class="mt-2 prose">
+                  <div class="mt-4 prose">
+                    <h1 class="mb-1">👋 Hi!</h1>
+                    <p class="text-sm text-gray-500">This is a community-driven mapping project listing <strong>NYC's bicycle repair stations</strong> and a bit of information about their current state.</p>
+                    <h2 class="mt-2 mb-1">So, what <em>is</em> a bike repair station?</h2>
                     <p class="text-sm text-gray-500">
-                      Community bike repair stations typically include both a bike repair stand, an air pump, and an assortment of tools that can be used to make basic repairs to bicycles.
+                      Community bike repair stations typically include both a bike repair stand, an air pump, and an assortment of tools that can be used to make basic repairs to bicycles. They're located in publicly-accesible spaces, and are free to use &mdash; <em>for anyone!</em>
                     </p>
+                    <h2 class="mt-2 mb-1">Want to pitch in?</h2>
                     <p class="text-sm text-gray-500">
                       Submit additional bike repair stations <a href="https://airtable.com/shrmvn9LahrCenMBO" target="__blank">here</a>.
                     </p>
-                    <p class="text-sm text-gray-400">Made with ❤️ by <a href="https://www.kevin-cole.com/" target="__blank">Kevin</a>.</p>
+                    <p class="text-sm text-gray-400">Made with ❤️ by <a href="https://www.kevin-cole.com/" target="__blank">Kevin</a> with <a href="https://astro.build/" target="__blank">🚀 Astro</a> & <a href="https://vuejs.org/">Vue</a>.</p>
                   </div>
     
                   <div class="mt-4">
