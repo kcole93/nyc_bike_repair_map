@@ -4,11 +4,12 @@ import MySidebar from "./MySidebar.vue";
 import MyContentArea from "./MyContentArea.vue";
 import MyMap from '../components/MyMap.vue';
 
+const bearer = 'Bearer ' + import.meta.env.AIRTABLE_API_KEY;
 const response = await fetch('https://api.airtable.com/v0/appX0BK9SmJSDDmQp/Community%20Bike%20Repair%20Stations?maxRecords=100&view=Export', {
         method: 'GET',
         credentials: 'include',
         headers: {
-            'Authorization': 'Bearer REDACTED_PRIVATE_KEY',
+            'Authorization': bearer ,
             'Content-Type': 'application/json'
         }
     });
@@ -28,7 +29,7 @@ const response = await fetch('https://api.airtable.com/v0/appX0BK9SmJSDDmQp/Comm
             <MyNavbar client:only />
         </header>
         <div class="flex h-full w-screen">
-            <MySidebar remote_data={remote_data} />
+            <MySidebar client:only remote_data={remote_data} />
             <MyContentArea>
                 <MyMap client:only remote_data={remote_data}></MyMap>
             </MyContentArea>

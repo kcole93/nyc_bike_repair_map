@@ -4,7 +4,7 @@
         <StationCard
           v-for="record in remote_data.records"
           :key="record.id"
-          :station="record.fields"
+          :station="record"
         />
       </div>
     </aside>

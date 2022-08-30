@@ -10,13 +10,13 @@
 
     function condition_styling(condition) {
         
-        if (condition == '😀 Good') {
+        if (condition == 'Good') {
             return 'bg-green-200 text-green-700'
         }
-        if (condition == '😊 Mostly Usable') {
+        if (condition == 'Mostly Usable') {
             return 'bg-orange-200 text-orange-700'
         }
-        if (condition == '😞 Unusable') {
+        if (condition == 'Unusable') {
             return 'bg-red-200 text-red-700'
         }
 
