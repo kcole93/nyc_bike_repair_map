@@ -27,7 +27,7 @@
       </div>
       <div clas="items-stretch">
         <button
-        class="mt-4 w-full bg-orange-200 hover:bg-orange-500 text-slate-700 py-2 px-4 border border-orange-500 rounded"
+        class="w-full rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
         @click="setSelected(station)"
       >
         Show on map
@@ -49,7 +49,11 @@
   
   function setSelected(station) {
     selectedRecord.set(station)
-    center.set([parseFloat(station.fields.lat), parseFloat(station.fields.lng)])
+    center.set(parseLatLng(station))
+  }
+
+  function parseLatLng(record){
+    return [parseFloat(record.fields.lat), parseFloat(record.fields.lng)]
   }
 
   function splitAmenities(amenities) {
