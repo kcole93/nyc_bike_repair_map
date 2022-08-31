@@ -24,11 +24,17 @@
           </ul>
         </div>
       </div>
+      <div v-if="showSubmitLink" class="items-stretch my-5">
+        <p class="text-gray-400">Something not right? <a :href="updateFormUrl" target="_blank">Submit updated information</a></p>
+    </div>
       </div>
 </template>
 
 <script setup>
     import { splitAmenities, splitNotes } from '../components/composables/RecordComposables';
     import ConditionTag from '../components/ConditionTag.vue';
-    defineProps(['record'])
+    const props = defineProps(['record', 'showSubmitLink'])
+
+    const updateFormUrl = "https://airtable.com/shrFR0CPoJfCOSRNJ?prefill_StationRecord=" + props.record.id
+
 </script>
