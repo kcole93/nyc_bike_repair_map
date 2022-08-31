@@ -6,8 +6,8 @@
       </div>
       <div id="amenities-wrapper" v-if="record.fields.amenities">
         <p class="font-semibold text-sm mt-2 mb-0">Amenities:</p>
-        <div class="container prose text-sm mt-0 px-2">
-          <ul>
+        <div class="container text-sm mt-0 px-2">
+          <ul class="list-disc list-inside">
             <li v-for="item in splitAmenities(record.fields.amenities)">
               {{ item }}
             </li>
@@ -16,8 +16,8 @@
       </div>
       <div id="notes-wrapper" v-if="record.fields.notes">
         <p class="font-semibold text-sm mt-1 mb-0">Notes:</p>
-        <div class="container prose text-sm mt-0 px-2">
-          <ul>
+        <div class="container text-sm mt-0 px-2">
+          <ul class="list-disc list-inside">
             <li v-for="item in splitNotes(record.fields.notes)">
               {{ item }}
             </li>

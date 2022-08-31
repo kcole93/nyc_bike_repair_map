@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="top-0 left-0 z-20 w-full border-b border-gray-200 bg-white px-2 py-2.5 sm:px-4"
+        class="top-0 left-0 z-20 w-full border-b border-gray-200 bg-white dark:bg-slate-700 dark:text-slate-50 px-2 py-2.5 sm:px-4"
       >
         <div
           class="mx-auto flex flex-wrap items-center justify-between"
@@ -11,7 +11,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
-              stroke="black"
+              stroke="coral"
               class="h-6 w-6"
             >
               <path
@@ -29,7 +29,7 @@
           <div class="flex md:order-2">
             <button
               type="button"
-              class="mr-3 inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+              class="mr-3 inline-flex justify-center rounded-md border border-transparent bg-orange-100 dark:bg-orange-300 px-4 py-2 text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
               @click="openModal"
             >
               About

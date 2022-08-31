@@ -6,7 +6,7 @@ import MyMap from "../components/MyMap.vue";
 
 const bearer = "Bearer " + import.meta.env.AIRTABLE_API_KEY;
 const response = await fetch(
-    "https://api.airtable.com/v0/appX0BK9SmJSDDmQp/Community%20Bike%20Repair%20Stations?maxRecords=100&view=Export",
+    `https://api.airtable.com/v0/${import.meta.env.AIRTABLE_APP_ID}/Community%20Bike%20Repair%20Stations?maxRecords=100&view=Export`,
     {
         method: "GET",
         credentials: "include",
