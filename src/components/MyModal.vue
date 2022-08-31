@@ -48,7 +48,6 @@
                     </p>
                     <p class="text-sm text-gray-400">Made with ❤️ by <a href="https://www.kevin-cole.com/" target="__blank">Kevin</a> with <a href="https://astro.build/" target="__blank">🚀 Astro</a> & <a href="https://vuejs.org/">Vue</a>.</p>
                   </div>
-    
                   <div class="mt-4">
                     <button
                       type="button"
