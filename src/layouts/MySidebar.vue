@@ -1,10 +1,10 @@
 <template>
-    <aside class="top-0 bottom-0 h-screen overflow-y-auto border-solid border-r-4 border-orange-300 px-2 sm:w-1/3 md:w-1/3">
-      <div class="mx-2 grid grid-cols-1">
+    <aside class="top-0 bottom-0 h-full sm:h-screen overflow-y-auto border-solid sm:border-r-4 border-orange-300 px-2">
+      <div class="mx-2">
         <StationCard
           v-for="record in remote_data.records"
           :key="record.id"
-          :station="record"
+          :record="record"
         />
       </div>
     </aside>
