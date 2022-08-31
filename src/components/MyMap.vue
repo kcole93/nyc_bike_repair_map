@@ -40,11 +40,8 @@
 
   watch(selectedRecord, async (newRecord, oldRecord) => {
     if (newRecord != oldRecord) {
-      let recordId = newRecord.id
-      console.log(recordId)
-      console.log(parseLatLng(newRecord))
       flyToTarget(newRecord, 15)
-      let newMarker = markerRef.value.find((marker) => marker.options.id == recordId);
+      let newMarker = markerRef.value.find((marker) => marker.options.id == newRecord.id);
       newMarker.leafletObject.openPopup();
     }
   })
