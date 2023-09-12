@@ -1,46 +1,48 @@
 ---
-import MyNavbar from "../components/MyNavbar.vue";
-import MySidebar from "./MySidebar.vue";
-import MyContentArea from "./MyContentArea.vue";
-import MyMap from "../components/MyMap.vue";
+import MyNavbar from '../components/MyNavbar.vue'
+import MySidebar from './MySidebar.vue'
+import MyContentArea from './MyContentArea.vue'
+import MyMap from '../components/MyMap.vue'
 
-const bearer = "Bearer " + import.meta.env.AIRTABLE_API_KEY;
+const bearer = 'Bearer ' + import.meta.env.AIRTABLE_API_KEY
 const response = await fetch(
-    `https://api.airtable.com/v0/${import.meta.env.AIRTABLE_APP_ID}/Community%20Bike%20Repair%20Stations?maxRecords=100&view=Export`,
-    {
-        method: "GET",
-        credentials: "include",
-        headers: {
-            Authorization: bearer,
-            "Content-Type": "application/json",
-        },
+  `https://api.airtable.com/v0/${
+    import.meta.env.AIRTABLE_APP_ID
+  }/Community%20Bike%20Repair%20Stations?maxRecords=100&view=Export`,
+  {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      Authorization: bearer,
+      'Content-Type': 'application/json'
     }
-);
+  }
+)
 
-const remote_data = await response.json();
+const remote_data = await response.json()
 ---
 
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <title>NYC Bike Repair Stations</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <header>
-            <MyNavbar client:only />
-        </header>
-        <div class="inline-flex flex-col-reverse w-screen sm:flex-row">
-            <div class="sm:basis-1/4">
-                <MySidebar client:only remote_data={remote_data} />
-            </div>
-            <div class="sm:basis-3/4 h-96 sm:h-screen">
-                <MyContentArea>
-                    <MyMap client:only remote_data={remote_data} />
-                </MyContentArea>
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' href='/favicon.ico' sizes='any' />
+    <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+    <title>NYC Bike Repair Stations</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+  </head>
+  <body>
+    <header>
+      <MyNavbar client:only />
+    </header>
+    <div class='inline-flex flex-col-reverse w-screen sm:flex-row'>
+      <div class='sm:basis-1/4'>
+        <MySidebar client:only remote_data={remote_data} />
+      </div>
+      <div class='sm:basis-3/4 h-96 sm:h-screen'>
+        <MyContentArea>
+          <MyMap client:only remote_data={remote_data} />
+        </MyContentArea>
+      </div>
+    </div>
+  </body>
 </html>

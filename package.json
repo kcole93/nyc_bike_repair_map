@@ -19,6 +19,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.6.7",
     "@vueuse/core": "^9.1.1",
+    "leaflet": "^1.9.4",
     "vue": "^3.2.37"
   }
 }
